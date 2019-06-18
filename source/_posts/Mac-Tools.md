@@ -10,6 +10,7 @@ tags:
 * Betwixt
 * Caffeine
 * CheatSheet
+* Chrome
 * DataGrip
 * Expressions
 * Google Chrome
@@ -18,6 +19,7 @@ tags:
 * iStat Menus
 * iTerm
 * Moom
+* Motrix
 * Navicat Premium
 * NeteaseMusic
 * Numi
@@ -29,7 +31,9 @@ tags:
 * SimplyRAR
 * Snap
 * Sourcetree
+* Syncthing
 * stretchly
 * The Unarchiver
 * Transmit
 * Typora
+* VMware Fusion
