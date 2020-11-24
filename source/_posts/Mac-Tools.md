@@ -11,13 +11,15 @@ tags:
 * Caffeine
 * CheatSheet
 * Chrome
+* ClashX Pro
 * DataGrip
 * Expressions
 * Google Chrome
 * IntelliJ IDEA
 * iRamDisk
-* iStat Menus
+* Stats(free) / iStat Menus
 * iTerm
+* Macs Fan Control
 * Moom
 * Motrix
 * Navicat Premium
