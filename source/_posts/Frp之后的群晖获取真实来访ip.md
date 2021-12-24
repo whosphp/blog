@@ -23,7 +23,7 @@ real_ip_header X-Real-IP;
 ```
 重启 nginx
 ```
-synoservice --restart nginx
+nginx -s stop
 ```
 
 ### 2. 搭建 nginx 反代群晖
@@ -49,7 +49,9 @@ server {
 然后将 ssl 证书也导入 nginx 文件夹，并改名为 `cert` 和 `key`
 
 #### 2.2 创建 nginx 容器
-创建时选择 `高级设置 > 存储空间 > 添加文件夹` ，选择 `docker/nginx` 文件夹，`装载路径` 设置为 `/etc/nginx/conf.d` ， 然后正常创建即可
+创建时选择 `高级设置 > 存储空间 > 添加文件夹` ，选择 `docker/nginx` 文件夹，`装载路径` 设置为 `/etc/nginx/conf.d` ，然后 `端口设置` 中 `本地端口` 设置为 `50443` ，`容器端口` 设置为 `443` ，`类型` 设置为 `TCP` ，然后正常创建即可
+
+
 
 ### 3. 创建 frpc 客户端
 #### 3.1 在 `File Station` 中 docker 目录下新建 `frpc` 文件夹, 然后创建 `frpc.ini`
@@ -59,8 +61,8 @@ server {
 
 [dsm]
 type = tcp
-local_port = 443
-local_ip = 172.17.0.2 // 上面创建的 nginx 的 docker 内网 ip
+local_port = 50443 // 上面创建的 nginx 的映射的本地端口
+local_ip = 172.17.0.1
 remote_port = 33333 // 看自己喜好选择端口即可
 proxy_protocol_version = v2
 ```
